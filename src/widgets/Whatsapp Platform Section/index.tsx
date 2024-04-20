@@ -1,32 +1,50 @@
 "use client";
-import React, { useState } from 'react';
-import Image from 'next/image';
-import { whatsappPlateformData, whatsappPlateformDataInterface } from '@/assests/data/whatsapp_plateform_data';
+import React, { useState } from "react";
+import Image from "next/image";
+import {
+  whatsappPlateformData,
+  whatsappPlateformDataInterface,
+} from "@/assests/data/whatsapp_plateform_data";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 import "react-photo-view/dist/react-photo-view.css";
 import { motion, AnimatePresence } from "framer-motion";
 
 function Whatsapp_Plateform_Section() {
-  const [activeTab, setActiveTab] = useState<whatsappPlateformDataInterface>(whatsappPlateformData[0]); // State to track active tab index
+  const [activeTab, setActiveTab] = useState<whatsappPlateformDataInterface>(
+    whatsappPlateformData[0]
+  ); // State to track active tab index
 
   const handleItemClick = (item: whatsappPlateformDataInterface) => {
     setActiveTab(item);
   };
 
   return (
-    <div className='container mt-24 mb-10'>
+    <div className="container mt-24 mb-10">
       {/* Heading And Text */}
       <div className="text-center flex flex-col justify-center items-center">
-        <h1 className="text-3xl font-bold max-w-[350px] !leading-normal">The Most 'Complete' WhatsApp Platform</h1>
-        <p className="mt-4 mb-10 max-w-[420px] !leading-relaxed">Everything you need to notify, chat & engage your users All in one place</p>
+        <h1 className="text-3xl font-bold max-w-[350px] !leading-normal">
+          The Most &apos;Complete&apos; WhatsApp Platform
+        </h1>
+        <p className="mt-4 mb-10 max-w-[420px] !leading-relaxed">
+          Everything you need to notify, chat & engage your users All in one
+          place
+        </p>
       </div>
 
       {/* Tabs Section */}
-      <div className='container mb-20 max-sm3:hidden'>
+      <div className="container mb-20 max-sm3:hidden">
         {/* Tabs */}
-        <ul className='flex flex-wrap justify-center items-center text-[11.5px] font-bold gap-x-6 gap-y-2'>
+        <ul className="flex flex-wrap justify-center items-center text-[11.5px] font-bold gap-x-6 gap-y-2">
           {whatsappPlateformData.map((data, index) => (
-            <li key={data.id} onClick={() => handleItemClick(data)} className={activeTab === data ? 'bg-[#e4feec] hover:bg-lime-50 p-2 cursor-pointer' : 'cursor-pointer hover:bg-lime-50 p-2'}>
+            <li
+              key={data.id}
+              onClick={() => handleItemClick(data)}
+              className={
+                activeTab === data
+                  ? "bg-[#e4feec] hover:bg-lime-50 p-2 cursor-pointer"
+                  : "cursor-pointer hover:bg-lime-50 p-2"
+              }
+            >
               {data.tab_heading.toUpperCase()}
             </li>
           ))}
@@ -34,18 +52,20 @@ function Whatsapp_Plateform_Section() {
       </div>
 
       {/* Main Section */}
-      <div className='flex max-sm3:hidden max-xl4:flex-col-reverse max-xl4:gap-y-16 pb-28 pt-12 max-xl4:pb-72  items-center xl4:justify-between justify-center  !w-full xl3:pl-14 xl4:gap-x-8 xl:pl-10 '>
+      <div className="flex max-sm3:hidden max-xl4:flex-col-reverse max-xl4:gap-y-16 pb-28 pt-12 max-xl4:pb-72  items-center xl4:justify-between justify-center  !w-full xl3:pl-14 xl4:gap-x-8 xl:pl-10 ">
         {/* Left Side */}
-        <div className=' relative w-full  max-xl4:w-screen max-xl4:pl-6 max-xl4:mr-6 '>
+        <div className=" relative w-full  max-xl4:w-screen max-xl4:pl-6 max-xl4:mr-6 ">
           {/* Image */}
           {/* <Image src={whatsappPlateformData[activeTab].imageSrc} alt={whatsappPlateformData[activeTab].altText} width={550} height={550} className='object-contain max-xl4:w-full' /> */}
-          <PhotoProvider className='max-xl4:w-screen'>
-            <AnimatePresence >
+          <PhotoProvider className="max-xl4:w-screen">
+            <AnimatePresence>
               {whatsappPlateformData.map((item) => {
                 if (activeTab?.id == item.id) {
                   return (
                     <PhotoView src={activeTab.imageSrc.src} key={item.id}>
-                      <motion.div className="absolute xl4:-top-44" key={item.id}
+                      <motion.div
+                        className="absolute xl4:-top-44 cursor-zoom-in"
+                        key={item.id}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
@@ -54,12 +74,9 @@ function Whatsapp_Plateform_Section() {
                           src={activeTab.imageSrc}
                           alt="image"
                           className="object-contain shadow xl4:w-[550px]   "
-                         
-                          
-      
                         />
                       </motion.div>
-                     </PhotoView>
+                    </PhotoView>
                   );
                 }
               })}
@@ -67,42 +84,59 @@ function Whatsapp_Plateform_Section() {
           </PhotoProvider>
         </div>
         {/* Right Side */}
-        <div className='  '>
+        <div className="  ">
           {/* Content */}
           {whatsappPlateformData.map((data, index) => {
-            
             if (activeTab?.id == data.id) {
               return (
-                <div className='flex flex-col gap-y-5 w-full max-xl4:text-start max-xl4:justify-center max-xl4:items-start  ' key={data.id}>
-                <h1 className='text-2xl font-bold '>{activeTab.heading}</h1>
-                <p className='max-xl4:max-w-[420px]'>{activeTab.paragraph}</p>
-                <p className='max-xl4:max-w-[420px]'>{activeTab.description}</p>
-                <div className='mt-2 '>
-                <button className='text-[#03cf65] border rounded border-b-2 border-solid border-[#03cf65] px-4 py-3 shadow-lg hover:shadow-xl text-sm font-bold whitespace-nowrap transition-all duration-300   transform hover:-translate-y-0.5'>{activeTab.buttonText}</button>
+                <div
+                  className="flex flex-col gap-y-5 w-full max-xl4:text-start max-xl4:justify-center max-xl4:items-start  "
+                  key={data.id}
+                >
+                  <h1 className="text-2xl font-bold ">{activeTab.heading}</h1>
+                  <p className="max-xl4:max-w-[420px]">{activeTab.paragraph}</p>
+                  <p className="max-xl4:max-w-[420px]">
+                    {activeTab.description}
+                  </p>
+                  <div className="mt-2 ">
+                    <button className="text-[#03cf65] border rounded border-b-2 border-solid border-[#03cf65] px-4 py-3 shadow-lg hover:shadow-xl text-sm font-bold whitespace-nowrap transition-all duration-300   transform hover:-translate-y-0.5">
+                      {activeTab.buttonText}
+                    </button>
+                  </div>
                 </div>
-              </div>
-              )
-            }})}
+              );
+            }
+          })}
         </div>
       </div>
 
       {/* Mobile View */}
-      <div className='sm3:hidden max-sm3:mt-10'>
+      <div className="sm3:hidden max-sm3:mt-10">
         <ul>
           {whatsappPlateformData.map((data, index) => (
-            <li className='flex flex-col gap-y-5 justify-center items-center ' key={data.id}>
-            <div className='flex flex-col gap-y-5'>
-              <h1 className='text-2xl font-bold '>{data.heading}</h1>
-              <p className='max-w-[420px]'>{data.paragraph}</p>
-              <p className='max-w-[420px]'>{data.description}</p>
-              <div className='max-sm2:w-full '>
-              <button className='text-[#03cf65] border rounded border-b-2 border-solid border-[#03cf65] px-4 py-3 shadow-lg text-sm font-bold max-sm2:w-full whitespace-nowrap transition-all duration-300 hover:bg-[#03b95a]  transform hover:-translate-y-0.5 '>{data.buttonText}</button>
+            <li
+              className="flex flex-col gap-y-5 justify-center items-center "
+              key={data.id}
+            >
+              <div className="flex flex-col gap-y-5">
+                <h1 className="text-2xl font-bold ">{data.heading}</h1>
+                <p className="max-w-[420px]">{data.paragraph}</p>
+                <p className="max-w-[420px]">{data.description}</p>
+                <div className="max-sm2:w-full ">
+                  <button className="text-[#03cf65] border rounded border-b-2 border-solid border-[#03cf65] px-4 py-3 shadow-lg text-sm font-bold max-sm2:w-full whitespace-nowrap transition-all duration-300 hover:bg-[#03b95a]  transform hover:-translate-y-0.5 ">
+                    {data.buttonText}
+                  </button>
+                </div>
               </div>
-            </div>
-         
-            <div className='mt-10 mb-14'>
-              <Image src={data.imageSrc} alt={data.altText} width={550} height={550}/>
-            </div>
+
+              <div className="mt-10 mb-14">
+                <Image
+                  src={data.imageSrc}
+                  alt={data.altText}
+                  width={550}
+                  height={550}
+                />
+              </div>
             </li>
           ))}
         </ul>

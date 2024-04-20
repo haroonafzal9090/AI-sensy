@@ -41,9 +41,11 @@ function Header() {
   >
     <div className="flex items-center justify-evenly container max-xl3:justify-start max-xl3:gap-x-6 max-xl3:py-2 xl3:gap-x-4 max-xl1:justify-between">
       {/* logo */}
+      <Link href={"/"}>
       <div className="shrink-0 transition-opacity duration-200 ease-in-out hover:opacity-50 cursor-pointer">
         <Image src={"/Logo.png"} alt="Logo" width={200} height={200} className=" object-contain shrink-0" />
       </div>
+      </Link>
       <div className="xl3:flex items-center max-xl3:gap-x-10 gap-x-5 max-xl3:space-y-3 max-xl1:hidden w-full  ">
         {/* links */}
         <div className="relative w-full ">

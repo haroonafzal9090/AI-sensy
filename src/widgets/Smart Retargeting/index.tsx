@@ -48,7 +48,7 @@ function Smart_Retargeting_For_Sales() {
                 >
                   <polygon points="6 3 20 12 6 21 6 3" />
                 </svg>
-                <div className="absolute top-48 text-white text-xl text-center w-full h-full ">
+                <div className="absolute md2:top-48 sm:top-56 sm3:top-52 max-sm3:top-48 max-sm2:top-44 max-sm1:top-[155px] max-xs:top-36 text-white text-xl max-sm2:text-lg text-center w-full h-full ">
                   0:54
                 </div>
               </div>

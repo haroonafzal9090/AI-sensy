@@ -24,11 +24,12 @@ function Video_Section() {
               <Image
                 src={video_image}
                 alt="Webinar Image"
-                className="object-contain h-[500px]"
+                className="object-contain lg:w-[950px]"
+                
               />
             </div>
             <div className="absolute inset-0 flex items-center justify-center group">
-              <div className="text-white relative bg-[rgba(84,187,255,0.8)]/[0.5] h-[85px] w-32 items-center flex justify-center transition-all duration-100 group-hover:w-[890px] group-hover:h-[500px]">
+              <div className="text-white  relative bg-[rgba(84,187,255,0.8)]/[0.5] h-[85px] w-32 items-center flex justify-center transition-all duration-100 group-hover:max-lg:w-full group-hover:w-[950px] group-hover:h-full">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -43,7 +44,7 @@ function Video_Section() {
                 >
                   <polygon points="6 3 20 12 6 21 6 3" />
                 </svg>
-                <div className="absolute top-72 text-white text-xl text-center w-full ">
+                <div className="absolute mt-32 hidden group-hover:block  text-white text-xl text-center w-full  ">
                   2:44
                 </div>
               </div>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
+<g clip-path="url(#clip0_1_5)">
+<path d="M17.244 0.25H20.552L13.325 8.51L21.827 19.75H15.17L9.956 12.933L3.99 19.75H0.679998L8.41 10.915L0.253998 0.25H7.08L11.793 6.481L17.244 0.25ZM16.083 17.77H17.916L6.084 2.126H4.117L16.083 17.77Z" fill="black"/>
+</g>
+<defs>
+<clipPath id="clip0_1_5">
+<rect width="22" height="20" fill="white"/>
+</clipPath>
+</defs>
+<style xmlns="" class="darkreader darkreader--fallback">html, body, body :not(iframe) {
+    background-color: #1e2021 !important;
+    border-color: #7d7468 !important;
+    color: #eeece9 !important;
+}
+div[style*="background-color: rgb(135, 135, 135)"] {
+    background-color: #878787 !important;
+}</style></svg>

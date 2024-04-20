@@ -3,18 +3,15 @@ import { useState } from "react";
 import Image from "next/image";
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  sell_your_products_Interface,
-  sell_your_products_data,
-} from "@/assests/data/sell_your_products_data";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 import "react-photo-view/dist/react-photo-view.css";
+import { whatsapp_engagement_data, whatsapp_engagement_data_Interface } from "@/assests/data/features/whatsapp_engagement_data";
 
-function Sell_Products_Section() {
+function Whatsapp_Engagment_Section() {
   const [selectedItem, setSelectedItem] =
-    useState<sell_your_products_Interface | null>(sell_your_products_data[0]);
+    useState<whatsapp_engagement_data_Interface | null>(whatsapp_engagement_data[0]);
 
-  const handleItemClick = (item: sell_your_products_Interface) => {
+  const handleItemClick = (item: whatsapp_engagement_data_Interface) => {
     setSelectedItem(item);
   };
 
@@ -22,11 +19,11 @@ function Sell_Products_Section() {
     <div className="container mt-24 mb-10">
       {/* Heading And Text */}
       <div className="text-center flex flex-col justify-center items-center ">
-        <h1 className="sm2:text-3xl text-2xl font-bold max-w-[350px] !leading-snug">
-          Sell your Products on WhatsApp
+        <h1 className="sm2:text-3xl text-2xl font-bold max-w-[410px] !leading-snug">
+        Everything You Need for Whatsapp Engagement
         </h1>
-        <p className="mt-4 mb-10">
-          WhatsApp Catalog, Cart & Payments in One Place!
+        <p className="mt-4 mb-10 max-w-[440px]">
+        AiSensy Platform covers all aspects of Marketing, CRM & Customer Support in one Place
         </p>
       </div>
 
@@ -36,7 +33,7 @@ function Sell_Products_Section() {
         <div className="flex-1 relative !h-full w-full justify-center items-center   ">
           <PhotoProvider>
             <AnimatePresence >
-              {sell_your_products_data.map((item) => {
+              {whatsapp_engagement_data.map((item) => {
                 if (selectedItem?.id == item.id) {
                   return (
                     <PhotoView src={selectedItem?.image.src} key={item.id}>
@@ -64,7 +61,7 @@ function Sell_Products_Section() {
         {/* Right Side Form */}
         <div className="flex-1">
           <ul className="flex flex-col gap-y-5 max-w-[420px]">
-            {sell_your_products_data.map((item) => (
+            {whatsapp_engagement_data.map((item) => (
               <li
                 key={item.id}
                 className={
@@ -88,7 +85,7 @@ function Sell_Products_Section() {
       {/* Mobile View Div */}
       <div className="md2:hidden">
         <ul className="flex flex-col gap-y-20  justify-center items-center ">
-          {sell_your_products_data.map((item) => (
+          {whatsapp_engagement_data.map((item) => (
             <>
               <li
                 key={item.id}
@@ -117,10 +114,10 @@ function Sell_Products_Section() {
       <div className="flex justify-center mt-10">
         <button className="flex px-2.5 pr-5  py-1.5 bg-[#943bdc1f] rounded-full items-center  sm2:gap-x-2 max-sm2:gap-x-2 transition-all hover:bg-[rgba(148,59,220,0.185)] group">
           <span className="text-white text-[10px] font-bold whitespace-nowrap bg-[#943bdc] px-3 py-1 rounded-full">
-            GET STARTED
+            EXCITED
           </span>
           <p className="text-[#943bdc] text-sm font-medium sm2:whitespace-nowrap">
-            Start your 14-Day Free Trial
+            Talk to Sales
           </p>
           <svg
             className="sm2:w-4 sm2:h-4 w-3 h-3 group-hover:translate-x-1"
@@ -139,4 +136,4 @@ function Sell_Products_Section() {
   );
 }
 
-export default Sell_Products_Section;
+export default Whatsapp_Engagment_Section;

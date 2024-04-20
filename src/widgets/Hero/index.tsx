@@ -6,7 +6,7 @@ function Hero() {
   return (
     <div className="container pt-4 flex mt-20 max-lg:flex-col max-lg:justify-center max-lg:items-center max-sm2:px-5 ">
       {/* Right Section */}
-      <div className=" lg:w-1/2 w-full   ">
+      <div className=" lg:w-1/2 w-full max-lg:justify-center max-lg:items-center max-lg:flex max-lg:flex-col   ">
         <h1 className=" text-[45px] font-bold max-lg:text-center leading-snug max-md:text-4xl max-sm2:text-3xl max-sm2:leading-normal max-md:leading-normal text-[#303030] lg:max-w-[400px]   ">
           Your Complete WhatsApp Engagement Platform
         </h1>
@@ -14,32 +14,32 @@ function Hero() {
           Businesses drive 25-60% Revenues using AiSensy
         </h2>
         {/* List */}
-        <ul className="mt-5 text-[#3d3d3d] text-[14.8px] font-medium space-y-1 max-lg:justify-center max-lg:items-center max-lg:flex max-lg:flex-col ">
-          <li className="flex items-center    ">
-            <span className="w-1 h-1 mr-2 rounded-full bg-[#03cf65]"></span>
+        <ul className="mt-5  text-[#3d3d3d] text-[14.8px] max-lg:text-center font-medium space-y-1 max-lg:justify-center max-lg:items-center max-lg:flex max-lg:flex-col ">
+          <li className="block items-center    ">
+            <span className="w-1 h-1 mr-2 rounded-full bg-[#03cf65] inline-block"></span>
             Broadcast Promotional Offers to Unlimited Users
           </li>
-          <li className="flex items-center    ">
-            <span className="w-1 h-1 mr-2 rounded-full bg-[#03cf65]"></span>
+          <li className="block items-center    ">
+            <span className="w-1 h-1 mr-2 rounded-full bg-[#03cf65] inline-block"></span>
             Sell your Products on WhatsApp using Catalogs
           </li>
-          <li className="flex items-center   ">
-            <span className="w-1 h-1 mr-2 rounded-full bg-[#03cf65]"></span>
+          <li className="block items-center   ">
+            <span className="w-1 h-1 mr-2 rounded-full bg-[#03cf65] inline-block"></span>
             Automate Messages via Integrations
           </li>
-          <li className="flex items-center  ">
-            <span className="w-1 h-1 mr-2 rounded-full bg-[#03cf65]"></span>
+          <li className="block items-center  ">
+            <span className="w-1 h-1 mr-2 rounded-full bg-[#03cf65] inline-block"></span>
             Enable Multi-Agent Live Chat for Customer Support
           </li>
-          <li className="flex items-center     ">
-            <span className="w-1 h-1 mr-2 rounded-full bg-[#03cf65]"></span>
+          <li className="block items-center     ">
+            <span className="w-1 h-1 mr-2 rounded-full bg-[#03cf65] inline-block"></span>
             Build Chatbots & Solve for 24 x 7 Support & Engagement
           </li>
         </ul>
 
-        <div className="gap-x-2 flex mt-5 max-lg:justify-center max-lg:items-center   ">
-          <span className="text-[#303030] font-medium whitespace-nowrap">⚡️Powered by</span>
-          <p className="font-bold text-[#3d3d3d]">Official WhatsApp Business API</p>
+        <div className="gap-x-2 max-sm1:gap-x-3 flex mt-5 text-center ">
+          <span className="text-[#303030] font-medium max-lg:text-center ">⚡️Powered by</span>
+          <p className="font-bold text-[#3d3d3d] max-lg:text-center  ">Official WhatsApp Business API</p>
         </div>
         {/* Buttons */}
        <div className="flex max-sm2:flex-col max-sm2:gap-y-3 max-sm2:w-full gap-x-3 mt-10 mb-3 sm2:justify-center sm2:items-center lg:justify-start lg:items-start max-sm2:px-6">

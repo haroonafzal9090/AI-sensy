@@ -5,6 +5,7 @@ import youtube_logo from "@/assests/images/youtube.png"
 import instagram_logo from "@/assests/images/instagram.png"
 import facbook_logo from "@/assests/images/facebook.png"
 import linkdien_logo from "@/assests/images/linkdien.png"
+import twitter_logo from "@/assests/images/twitter-x.svg"
 
 function Footer() {
   return (
@@ -58,6 +59,9 @@ function Footer() {
                 </li>
                 <li className='flex items-center gap-x-2 transition-all duration-300 hover:bg-opacity-95  transform hover:-translate-y-0.5 cursor-pointer'>
                     <Image src={facbook_logo} alt='facebook-logo' width={20} height={20} />
+                </li>
+                <li className='flex items-center gap-x-2 transition-all duration-300 hover:bg-opacity-95  transform hover:-translate-y-0.5 cursor-pointer'>
+                    <Image src={twitter_logo} alt='facebook-logo' width={20} height={20} />
                 </li>
                 <li className='flex items-center gap-x-2 transition-all duration-300 hover:bg-opacity-95  transform hover:-translate-y-0.5 cursor-pointer'>
                     <Image src={linkdien_logo} alt='linkdien_logo' width={20} height={20} />

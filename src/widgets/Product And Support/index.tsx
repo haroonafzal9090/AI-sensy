@@ -51,7 +51,7 @@ function ProductAndSupport() {
           {/* text */}
           <div className="flex flex-col gap-y-3">
             <p className="xl1:max-w-[440px] max-w-[485px]">
-            AiSensy helped us increase our customer engagement. Our customer engagement increased from 35% to 90% with AiSensy's Smart Retargeting feature.
+            AiSensy helped us increase our customer engagement. Our customer engagement increased from 35% to 90% with AiSensy&apos;s Smart Retargeting feature.
             </p>
             <h2 className="font-bold xl1:text-2xl text-xl">Akaash Jain,</h2>
             <h2 className="font-bold xl1:text-2xl text-xl">
